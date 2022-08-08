@@ -1,0 +1,85 @@
+.opening-image{
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-image: url("https://static.toiimg.com/photo/msid-71212679/71212679.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cover-white{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.7);
+}
+.align-it{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    padding: 10px 10px 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.opening-text{
+    /* background-color: blue; */
+    height: auto;
+}
+.ot-title{
+    font-size: 2.8em;
+}
+.ot-para{
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.ot-explore{
+    padding: 10px 30px 10px 30px;
+    font-size: 1.4em;
+    border-radius: 8px;
+}
+
+
+/* welcoming */
+.welcoming{
+    padding: 30px 20px 20px 2px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 100vw;
+}
+.w-title{
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+@media screen and (min-height:768px) {
+    .opening-image{
+        height: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .align-it{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .ot-title{
+        font-size: 4em;
+    }
+    .ot-para{
+        font-size: 1.2em;
+    }
+    .ot-explore{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width:512px){
+    .opening-text{
+        width: 512px;
+    }
+    .welcoming{
+        width: 512px;
+        margin: 0 auto;
+    }
+}
