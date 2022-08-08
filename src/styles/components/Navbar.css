@@ -18,7 +18,8 @@
     padding: 5px;
 }
 .csc-text{
-    font-weight: bold;
+    color: var(--black);
+    font-weight: 600;
 }
 .nm-content{
     height: 100%;
@@ -50,6 +51,7 @@
 .ned-text{
     width: 100%;
     padding: 8px;
+    color: var(--black);
 }
 
 @media screen and (min-width: 403px) {

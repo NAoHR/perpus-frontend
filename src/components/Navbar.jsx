@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import {FaTimes,FaBars} from "react-icons/fa";
-import {useLocation} from "react-router-dom"
+import {useLocation} from "react-router-dom";
+import {Link} from "react-router-dom"
 import "../styles/components/Navbar.css";
 
 export default function Navbar(){
@@ -38,32 +39,44 @@ export default function Navbar(){
             </div>
             <div className="center-side flex c-black poppins f-align-all">
                 <div className="cs-content">
-                    <h4 className="csc-text" style={{
-                    textDecoration : `${nowPath === "/" ? "underline black" : ""}`
-                }}>
-                        home
-                    </h4>
+                    <Link to="/">
+                        <h4 className="csc-text" style={{
+                        textDecoration : `${nowPath === "/" ? "underline black" : ""}`,
+                        fontWeight : `${nowPath === "/" ? "bold" : "600"}`
+                        }}>
+                            home
+                        </h4>
+                    </Link>
                 </div>
                 <div className="cs-content">
-                    <h4 className="csc-text" style={{
-                    textDecoration : `${nowPath === "/books" ? "underline black" : ""}`
-                }}>
-                        books
-                    </h4>
+                    <Link to="/books">
+                        <h4 className="csc-text" style={{
+                        textDecoration : `${nowPath === "/books" ? "underline black" : ""}`,
+                        fontWeight : `${nowPath === "/books" ? "bold" : "600"}`
+                        }}>
+                            books
+                        </h4>
+                    </Link>
                 </div>
                 <div className="cs-content">
-                    <h4 className="csc-text" style={{
-                    textDecoration : `${nowPath === "/about" ? "underline black" : ""}`
-                }}>
-                        about
-                    </h4>
+                    <Link to="/about">
+                        <h4 className="csc-text" style={{
+                        textDecoration : `${nowPath === "/about" ? "underline black" : ""}`,
+                        fontWeight : `${nowPath === "/about" ? "bold" : "600"}`
+                    }}>
+                            about
+                        </h4>
+                    </Link>
                 </div>
                 <div className="cs-content">
-                    <h4 className="csc-text" style={{
-                    textDecoration : `${nowPath === "/guide" ? "underline black" : ""}`
-                }}>
-                        guide
-                    </h4>
+                    <Link to="/guide">
+                        <h4 className="csc-text" style={{
+                        textDecoration : `${nowPath === "/guide" ? "underline black" : ""}`,
+                        fontWeight : `${nowPath === "/guide" ? "bold" : "600"}`
+                    }}>
+                            guide
+                        </h4>
+                    </Link>
                 </div>
             </div>
             <div className="right-side nm-content">
@@ -74,26 +87,44 @@ export default function Navbar(){
         </nav>
         <div className="nav-expand c-lblack poppins b-white">
             <div className="ne-detail">
-                <h3 className="ned-text" style={{
-                    textDecoration : `${nowPath === "/" ? "underline black" : ""}`
-                }}>
-                    home
-                </h3>
+                <Link to="/">
+                    <h3 className="ned-text" style={{
+                        textDecoration : `${nowPath === "/" ? "underline black" : ""}`,
+                        fontWeight : `${nowPath === "/" ? "bold" : "600"}`
+                    }}>
+                        home
+                    </h3>
+                </Link>
             </div>
             <div className="ne-detail">
-                <h3 className="ned-text">
-                    books
-                </h3>
+                <Link to="/books">
+                    <h3 className="ned-text" style={{
+                        textDecoration : `${nowPath === "/books" ? "underline black" : ""}`,
+                        fontWeight : `${nowPath === "/books" ? "bold" : "600"}`
+                    }}>
+                        books
+                    </h3>
+                </Link>
             </div>
             <div className="ne-detail">
-                <h3 className="ned-text">
-                    about
-                </h3>
+                <Link to="/about">
+                    <h3 className="ned-text" style={{
+                        textDecoration : `${nowPath === "/about" ? "underline black" : ""}`,
+                        fontWeight : `${nowPath === "/about" ? "bold" : "600"}`
+                    }}>
+                        about
+                    </h3>
+                </Link>
             </div>
             <div className="ne-detail">
-                <h3 className="ned-text">
-                    guide
-                </h3>
+                <Link to="/guide">
+                    <h3 className="ned-text" style={{
+                        textDecoration : `${nowPath === "/guide" ? "underline black" : ""}`,
+                        fontWeight : `${nowPath === "/guide" ? "bold" : "600"}`
+                    }}>
+                        guide
+                    </h3>
+                </Link>
             </div>
         </div>
         </>
