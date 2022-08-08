@@ -1,6 +1,6 @@
 .opening-image{
     width: 100vw;
-    max-width: 100vw;
+    max-width:100%; 
     height: 100vh;
     display: flex;
     background-image: url("https://static.toiimg.com/photo/msid-71212679/71212679.jpg");
@@ -15,7 +15,6 @@
 .align-it{
     width: 100%;
     height: 100%;
-    /* background-color: red; */
     padding: 10px 10px 30px 10px;
     display: flex;
     flex-direction: column;
@@ -23,7 +22,6 @@
 }
 
 .opening-text{
-    /* background-color: blue; */
     height: auto;
 }
 .ot-title{
@@ -46,11 +44,14 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    max-width: 100vw;
+    max-width:100%; 
 }
 .w-title{
     margin-bottom: 10px;
     font-size: 1.6em;
+}
+.w-para{
+    font-size: 1.2em;
 }
 @media screen and (min-height:768px) {
     .opening-image{

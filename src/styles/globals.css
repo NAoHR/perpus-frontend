@@ -14,9 +14,7 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-html,body{
-    overflow-x: hidden;
-}
+
 /* color related */
     .c-black{
         color: var(--black);
