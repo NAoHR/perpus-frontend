@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import { useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
-import {manfaat} from "../utils/home"
+import {manfaat, kelebihan} from "../utils/home"
 import "../styles/containers/Home.css";
 
 function WelcomingCard({text}){
@@ -16,6 +16,19 @@ function WelcomingCard({text}){
             </h4>
         </div>
     </span>    
+    )
+}
+
+function AdvantagesCard({text}){
+    return (
+        <div className="ac-card b-lblue">
+            <div className="ac-top">
+                <img src={`/home/kelebihan/${text}.png`} alt="card image" className="acc-image" />
+            </div>
+            <h4 className="acc-text c-black poppins">
+                {text}
+            </h4>
+        </div>
     )
 }
 export default function Home(){
@@ -59,6 +72,26 @@ export default function Home(){
                         return <WelcomingCard text={v} key={v}/>
                     })
                 }
+            </div>
+        </section>
+        <section className="advantages s-size">
+            <h2 className="s-title poppins c-lblack">
+                Kelebihan
+            </h2>
+            <div className="advantages-content">
+                {
+                    kelebihan.map((v) => {
+                        return <AdvantagesCard key={v} text={v}/>
+                    })
+                }
+                <div className="ac-card b-lblue">
+                    <div className="ac-top">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/640px-PNG_transparency_demonstration_1.png" alt="card image" className="acc-image" />
+                    </div>
+                    <h4 className="acc-text c-black poppins">
+                        lorem ipsum dolor sit amet consectetur
+                    </h4>
+                </div>                
             </div>
         </section>
         </>

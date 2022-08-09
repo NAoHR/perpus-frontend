@@ -5,3 +5,9 @@ exports.manfaat = [
     "memudahkan proses pembelajaran",
     "peminjaman buku dilakukan secara teratur"
 ]
+
+exports.kelebihan = [
+    "Dapat mengefisiensi waktu ",
+    "fleksibilitas peminjaman buku",
+    "Pendataan dilakukan secara teratur dan efisiensi"
+]

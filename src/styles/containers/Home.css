@@ -100,8 +100,44 @@
     display: none; 
 }
 
-
-
+/* advantages related */
+.advantages{
+    /* background-color: red; */
+}
+.advantages-content{
+    width: 95%;
+    margin: 0px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.ac-card{
+    width: 250px;
+    min-height: 320px;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.ac-top{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.acc-image{
+    width: 90%;
+    height: auto;
+}
+.acc-text{
+    text-align: center;
+}
 @media screen and (min-height:768px) {
     .opening-image{
         height: 768px;
