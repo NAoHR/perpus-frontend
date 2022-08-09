@@ -73,6 +73,39 @@
     }
 
 /* alignment related */
-.t-center{
-    text-align: center;
-}
+    .t-center{
+        text-align: center;
+    }
+/* Section related */
+    .s-size{
+        width: 100vw;
+        max-width: 100%;
+        padding: 8px;
+    }
+    .s-title{
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width:1200px){
+        .s-size{
+            width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--base);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--dark-blue);
+    border-radius: 6px;
+  }

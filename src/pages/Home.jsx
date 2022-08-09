@@ -1,7 +1,11 @@
 import Navbar from "../components/Navbar";
+import { useRef } from "react";
+import { useDraggable } from "react-use-draggable-scroll";
 import "../styles/containers/Home.css";
 
 export default function Home(){
+    const ref = useRef();
+    const { events } = useDraggable(ref);
     return (
         <>
         <Navbar />
@@ -29,6 +33,45 @@ export default function Home(){
             <p className="w-para poppins c-black t-center">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, labore consectetur doloribus tenetur ut molestiae. Impedit dicta quas commodi facilis excepturi molestias cumque dolores deleniti! Maiores, perferendis. Odit, ducimus adipisci!
             </p>
+        </section>
+        <section className="manfaat s-size">
+            <h2 className="s-title poppins c-lblack">
+                Manfaat
+            </h2>
+            <div className="manfaat-content" {...events} ref={ref}>
+                <span>
+                    <div className="mc-card">
+                        <div className="mcc-black b-black"></div>
+                        <h4 className="mcc-text poppins c-white">
+                            lorem ipsum dolor sit
+                        </h4>
+                    </div>
+                </span>
+                <span>
+                    <div className="mc-card">
+                        <div className="mcc-black b-black"></div>
+                        <h4 className="mcc-text poppins c-white">
+                            lorem ipsum dolor sit
+                        </h4>
+                    </div>
+                </span>
+                <span>
+                    <div className="mc-card">
+                        <div className="mcc-black b-black"></div>
+                        <h4 className="mcc-text poppins c-white">
+                            lorem ipsum dolor sit
+                        </h4>
+                    </div>
+                </span>
+                <span>
+                    <div className="mc-card">
+                        <div className="mcc-black b-black"></div>
+                        <h4 className="mcc-text poppins c-white">
+                            lorem ipsum dolor sit
+                        </h4>
+                    </div>
+                </span>
+            </div>
         </section>
         </>
     )
