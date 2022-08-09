@@ -8,8 +8,19 @@ import "../styles/components/Navbar.css";
 export default function Navbar(){
     const [isNavbarShowed,setINS] = useState(false);
     const [nowPath,setNP] = useState(null);
+    const [isBlur,setIB] = useState(false);
 
     const path = useLocation();
+
+    useEffect(()=>{
+        document.addEventListener("scroll", function(){
+            if(window.pageYOffset >= 75){
+                setIB(true)
+            }else{
+                setIB(false);
+            }
+        })
+    },[])
 
     useEffect(()=>{
         const expand = document.getElementsByClassName("nav-expand")[0];
@@ -26,6 +37,10 @@ export default function Navbar(){
     },[path.pathname])
     return (
         <>
+        <div className="blur-nav" style={{
+            background: `rgba(255,255,255,${isBlur ? "0.6" : "0"})`,
+            transition: ".5s"
+        }}></div>
         <nav className="nav-main">
             <div className="left-side nm-content flex">
                 <div className="toggle f-align-all flex"  onClick={()=> setINS(!isNavbarShowed)}>
