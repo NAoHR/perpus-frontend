@@ -1,8 +1,23 @@
 import Navbar from "../components/Navbar";
 import { useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
+import {manfaat} from "../utils/home"
 import "../styles/containers/Home.css";
 
+function WelcomingCard({text}){
+    return (
+    <span>
+        <div className="mc-card" style={{
+            backgroundImage : `url("/home/manfaat/${text}.jpg")`
+        }}>
+            <div className="mcc-black b-black"></div>
+            <h4 className="mcc-text poppins c-white">
+                {text}
+            </h4>
+        </div>
+    </span>    
+    )
+}
 export default function Home(){
     const ref = useRef();
     const { events } = useDraggable(ref);
@@ -39,38 +54,11 @@ export default function Home(){
                 Manfaat
             </h2>
             <div className="manfaat-content" {...events} ref={ref}>
-                <span>
-                    <div className="mc-card">
-                        <div className="mcc-black b-black"></div>
-                        <h4 className="mcc-text poppins c-white">
-                            lorem ipsum dolor sit
-                        </h4>
-                    </div>
-                </span>
-                <span>
-                    <div className="mc-card">
-                        <div className="mcc-black b-black"></div>
-                        <h4 className="mcc-text poppins c-white">
-                            lorem ipsum dolor sit
-                        </h4>
-                    </div>
-                </span>
-                <span>
-                    <div className="mc-card">
-                        <div className="mcc-black b-black"></div>
-                        <h4 className="mcc-text poppins c-white">
-                            lorem ipsum dolor sit
-                        </h4>
-                    </div>
-                </span>
-                <span>
-                    <div className="mc-card">
-                        <div className="mcc-black b-black"></div>
-                        <h4 className="mcc-text poppins c-white">
-                            lorem ipsum dolor sit
-                        </h4>
-                    </div>
-                </span>
+                {
+                    manfaat.map((v) => {
+                        return <WelcomingCard text={v} key={v}/>
+                    })
+                }
             </div>
         </section>
         </>
