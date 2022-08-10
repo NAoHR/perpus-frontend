@@ -54,6 +54,9 @@
     .b-base{
         background-color: var(--base);
     }
+    .b-shadow{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 
 /* grid related */
     .flex{
@@ -70,6 +73,9 @@
     }
     .bebas{
         font-family: 'Bebas Neue', cursive;
+    }
+    .bold{
+        font-weight: bold;
     }
 
 /* alignment related */

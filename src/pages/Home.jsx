@@ -7,7 +7,7 @@ import "../styles/containers/Home.css";
 function WelcomingCard({text}){
     return (
     <span>
-        <div className="mc-card" style={{
+        <div className="mc-card b-shadow" style={{
             backgroundImage : `url("/home/manfaat/${text}.jpg")`
         }}>
             <div className="mcc-black b-black"></div>
@@ -92,6 +92,24 @@ export default function Home(){
                         lorem ipsum dolor sit amet consectetur
                     </h4>
                 </div>                
+            </div>
+        </section>
+        <section className="kelebihan s-size">
+            <h2 className="s-title poppins c-lblack">
+                Kelebihan
+            </h2>
+            <div className="school-map">
+                <div className="sm-text-side">
+                    <p className="poppins c-lblack sm-t">
+                    Jl. Balai Pustaka Baru I No.2, RW.7, Rawamangun, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13220
+                    </p>
+                    <a href="https://app.lapentor.com/sphere/smkn-26-1602643278?scene=5f87dd1c362df77f177c1f53">
+                        <span className="vtour poppins bold c-light b-dblue c-white b-shadow">
+                            Virtual Tour
+                        </span>
+                    </a>
+                </div>
+                <iframe className="sm-map" id="gmap_canvas" src="https://maps.google.com/maps?q=SMKN%2026%20jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div>
         </section>
         </>
