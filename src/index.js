@@ -7,11 +7,11 @@ import {
   Route,
 } from "react-router-dom";
 import './styles/globals.css';
-import About from './pages/About';
-import Books from './pages/Books';
-import Guide from './pages/Guide';
-import Home from './pages/Home';
-import Book from './pages/Book';
+import About from './containers/About';
+import Books from './containers/Books';
+import Guide from './containers/Guide';
+import Home from './containers/Home';
+import Book from './containers/Book';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -48,3 +48,8 @@ footer{
         align-items: flex-start;
     }
 }
+@media screen and (min-width:1070px) {
+    .footer-main{
+        width: 1070px;
+    }
+}
