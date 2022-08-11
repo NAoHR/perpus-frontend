@@ -38,7 +38,7 @@ export default function Navbar(){
     return (
         <>
         <div className="blur-nav" style={{
-            background: `rgba(255,255,255,${isBlur ? "0.6" : "0"})`,
+            background: `rgba(255,255,255,${isBlur ? "1" : "0"})`,
             transition: ".5s"
         }}></div>
         <nav className="nav-main">
@@ -49,9 +49,7 @@ export default function Navbar(){
                     </h2>
                 </div>
                 <div className="logo flex f-align-all">
-                    <h4 className="poppins c-black bold">
-                        LIWENSIX
-                    </h4>
+                    <img src="/logo_perpus.png" alt="" className="lwn"/>
                 </div>
             </div>
             <div className="center-side flex c-black poppins f-align-all">

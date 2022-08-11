@@ -40,6 +40,11 @@
     height: 100%;
     justify-content: center;
 }
+.lwn{
+    width: 120px;
+    /* background-color: red; */
+    height: 40px;
+}
 .toggle{
     height: 100%;
 }
