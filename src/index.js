@@ -7,22 +7,27 @@ import {
   Route,
 } from "react-router-dom";
 import './styles/globals.css';
-import About from './containers/About';
-import Books from './containers/Books';
-import Guide from './containers/Guide';
-import Home from './containers/Home';
-import Book from './containers/Book';
+import AboutPage from "./pages/AboutPage"
+// import About from './containers/About';
+import BooksPage from "./pages/BooksPage";
+// import Books from './containers/Books';
+import GuidePage from "./pages/GuidePage";
+// import Guide from './containers/Guide';
+import HomePage from "./pages/HomePage";
+// import Home from './containers/Home';
+import BookPage from "./pages/BookPage"
+// import Book from './containers/Book';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/about' element={<About />}/>
-          <Route path="/books" element={<Books />} />
-          <Route path="/books/:bookId" element={<Book />} />
-          <Route path='guide' element={<Guide />}/>
+          <Route path='/' element={<HomePage />}/>
+          <Route path='/about' element={<AboutPage />}/>
+          <Route path="/books" element={<BooksPage />} />
+          <Route path="/books/:bookId" element={<BookPage />} />
+          <Route path='guide' element={<GuidePage />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
