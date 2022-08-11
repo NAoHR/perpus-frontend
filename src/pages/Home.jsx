@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
 import {manfaat, kelebihan, photo} from "../utils/home"
 import "../styles/containers/Home.css";
+import Footer from "../components/Footer";
 
 function WelcomingCard({text}){
     return (
@@ -135,6 +136,7 @@ export default function Home(){
                 }
             </div>
         </section>
+        <Footer />
         </>
     )
 }

@@ -1,0 +1,50 @@
+footer{
+    width: 100vw;
+    max-width: 100%;
+    padding: 60px 10px 60px 10px;
+}
+.footer-main{
+    width: 95%;
+    display: flex;
+    padding: 10px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+
+.flogo{
+    width: 100%;
+    position: relative;
+}
+.flogo img{
+    width: 100%;
+}
+.ftext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+.ftext-icon{
+    display: flex;
+    gap: 8px;
+    font-size: 1.5em;
+}
+
+.ftext-content{
+    font-weight: 400;
+}
+@media screen and (min-width:334px) {
+    .fcontent{
+        width: 240px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .ftext{
+        text-align: left;
+        align-items: flex-start;
+    }
+}
