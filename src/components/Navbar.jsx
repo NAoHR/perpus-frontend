@@ -48,8 +48,10 @@ export default function Navbar(){
                         {isNavbarShowed ? <FaTimes /> : <FaBars />}
                     </h2>
                 </div>
-                <div className="logo flex">
-                    <img src="https://upload.wikimedia.org/wikipedia/id/e/ed/Nyan_cat_250px_frame.PNG" alt="temp_image" />
+                <div className="logo flex f-align-all">
+                    <h4 className="poppins c-black bold">
+                        LIWENSIX
+                    </h4>
                 </div>
             </div>
             <div className="center-side flex c-black poppins f-align-all">
