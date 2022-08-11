@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import { useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
-import {manfaat, kelebihan} from "../utils/home"
+import {manfaat, kelebihan, photo} from "../utils/home"
 import "../styles/containers/Home.css";
 
 function WelcomingCard({text}){
@@ -28,6 +28,17 @@ function AdvantagesCard({text}){
             <h4 className="acc-text c-black poppins">
                 {text}
             </h4>
+        </div>
+    )
+}
+
+function PhotoCard({text}){
+    return (
+        <div className="tp-card">
+            <img src={`/home/tim/${text}.png`} alt="" className="tp-card-image"/>
+            <h2 className="tp-text poppins c-lblack bold">
+                {text}
+            </h2>
         </div>
     )
 }
@@ -110,6 +121,18 @@ export default function Home(){
                     </a>
                 </div>
                 <iframe className="sm-map" id="gmap_canvas" src="https://maps.google.com/maps?q=SMKN%2026%20jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </section>
+        <section className="team s-size">
+            <h2 className="s-title poppins c-lblack">
+                Tim Kami
+            </h2>
+            <div className="team-photo">
+                {
+                    photo.map((v)=> {
+                        return <PhotoCard text={v} key={v} />
+                    })
+                }
             </div>
         </section>
         </>

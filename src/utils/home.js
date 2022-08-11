@@ -11,3 +11,17 @@ exports.kelebihan = [
     "fleksibilitas peminjaman buku",
     "Pendataan dilakukan secara teratur dan efisiensi"
 ]
+
+exports.photo = [
+    "abiyan",
+    "al badri",
+    "Ayya",
+    "fajar",
+    "fikki",
+    "luthfi",
+    "qoyyum",
+    "rudy",
+    "Sabarina",
+    "sarah",
+    "zian"
+]
