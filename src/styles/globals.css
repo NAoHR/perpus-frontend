@@ -6,6 +6,7 @@
     --dark-blue: #06283D;
     --white:#fff;
     --base:#E5E5E5;
+    --orange:#FFB755;
 }
 
 *{
@@ -34,6 +35,9 @@
     .c-base{
         color: var(--base);
     }
+    .c-orange{
+        color: var(--orange);
+    }
 
 /* Backroud related */
     .b-black{
@@ -53,6 +57,9 @@
     }
     .b-base{
         background-color: var(--base);
+    }
+    .b-orange{
+        background-color: var(--orange);
     }
     .b-shadow{
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

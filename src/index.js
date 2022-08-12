@@ -8,15 +8,10 @@ import {
 } from "react-router-dom";
 import './styles/globals.css';
 import AboutPage from "./pages/AboutPage"
-// import About from './containers/About';
 import BooksPage from "./pages/BooksPage";
-// import Books from './containers/Books';
 import GuidePage from "./pages/GuidePage";
-// import Guide from './containers/Guide';
 import HomePage from "./pages/HomePage";
-// import Home from './containers/Home';
 import BookPage from "./pages/BookPage"
-// import Book from './containers/Book';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
