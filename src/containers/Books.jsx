@@ -1,5 +1,33 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../styles/containers/Books.css";
+import {FaStar} from "react-icons/fa";
+
+
+function BookCard(){
+    return(
+            <div className="book-card">
+                <div className="bc-image">
+                    <div className="bc-rating b-white poppins">
+                        <p className="c-orange">
+                            <FaStar />
+                        </p>
+                        <p>
+                            4.9
+                        </p>
+                    </div>
+                </div>
+                <div className="bc-text">
+                    <h3 className="poppins c-lblack bold">
+                        Lorem Ipsum Dolor sit amet constrectur
+                    </h3>
+                    <p className="c-lblack poppins">
+                        lorem ipsum dolor
+                    </p>
+                </div>
+            </div>
+    )
+}
 export default function Books(){
     return (
         <>
@@ -23,8 +51,23 @@ export default function Books(){
             </div>
         </section>
         <section className="books s-size flex">
-
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
         </section>
+        <Footer />
         </>
     )
 }

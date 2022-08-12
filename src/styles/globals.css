@@ -5,7 +5,7 @@
     --light-blue:#C4DDFF;
     --dark-blue: #06283D;
     --white:#fff;
-    --base:#E5E5E5;
+    --base:#f7f7f7;
     --orange:#FFB755;
 }
 
@@ -15,7 +15,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
+html,body{
+    background-color: var(--base);
+}
 /* color related */
     .c-black{
         color: var(--black);
