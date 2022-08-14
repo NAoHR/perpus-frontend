@@ -1,0 +1,16 @@
+.no-display{
+    width: 100%;
+    min-height: 400px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.nd-text{
+    font-size: 2em;
+}
+.nd-icon{
+    font-size: 5em;
+}
