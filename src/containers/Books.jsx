@@ -2,9 +2,12 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/containers/Books.css";
 import {FaStar} from "react-icons/fa";
+import NoDisplay from "../components/NoDisplay";
+import { useState } from "react";
 
 
-function BookCard(){
+function BookCard({book}){
+    const {title, rating, genre, author} = book
     return(
             <div className="book-card">
                 <div className="bc-image">
@@ -13,22 +16,44 @@ function BookCard(){
                             <FaStar />
                         </p>
                         <p>
-                            4.9
+                            {rating}
                         </p>
                     </div>
                 </div>
                 <div className="bc-text">
                     <h3 className="poppins c-lblack bold">
-                        Lorem Ipsum Dolor sit amet constrectur
+                        {title}
                     </h3>
                     <p className="c-lblack poppins">
-                        lorem ipsum dolor
+                        {author}
                     </p>
                 </div>
             </div>
     )
 }
-export default function Books(){
+
+
+function BookMapper({data}){
+    if(data.length > 0){
+        return data.map((v)=> {
+            return <BookCard book={v} key={v.id} />
+        })
+    }
+    return <NoDisplay message={"No Data To Be Displayed"} />
+}
+export default function Books({books}){
+    const [filterBook,setFB] = useState(books);
+
+    function filterText(v){
+        const value = v.target.value;
+        setFB(
+            books.filter((v)=> {
+                if(v.title.toLowerCase().indexOf(value) !== -1 || v.author.toLowerCase().indexOf(value) !== -1){
+                    return v
+                }
+            })
+        )
+    }
     return (
         <>
         <Navbar />
@@ -36,8 +61,7 @@ export default function Books(){
             <div className="s-size card-wrap">
                 <div className="search">
                     <div className="input-box round-it">
-                        <input type="text" name="filter" className="poppins b-white c-orange bold" autoCorrect="false" placeholder="Cari disini"/>
-                        
+                        <input type="text" name="filter" className="poppins b-white c-orange bold" autoCorrect="false" placeholder="Cari disini" onChange={filterText}/>
                     </div>
                     <div className="filter-box round-it">
                     <select name="cars" id="cars" form="carform" className="poppins c-white bold b-orange">
@@ -51,21 +75,7 @@ export default function Books(){
             </div>
         </section>
         <section className="books s-size flex">
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
+            <BookMapper data={filterBook}/>
         </section>
         <Footer />
         </>
