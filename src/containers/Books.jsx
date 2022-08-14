@@ -7,10 +7,12 @@ import { useState } from "react";
 
 
 function BookCard({book}){
-    const {title, rating, genre, author} = book
+    const {title, rating, image, author} = book
     return(
             <div className="book-card">
-                <div className="bc-image">
+                <div className="bc-image" style={{
+                    backgroundImage : `url(${image})`
+                }}>
                     <div className="bc-rating b-white poppins">
                         <p className="c-orange">
                             <FaStar />
@@ -22,7 +24,7 @@ function BookCard({book}){
                 </div>
                 <div className="bc-text">
                     <h3 className="poppins c-lblack bold">
-                        {title}
+                        {title.length > 38 ? `${title.slice(0,36)}...` : title}
                     </h3>
                     <p className="c-lblack poppins">
                         {author}
@@ -54,6 +56,17 @@ export default function Books({books}){
             })
         )
     }
+
+    function filterSelect(v){
+        const value = v.target.value;
+        if(value === "all"){
+            setFB(books)
+        }else{
+            setFB(
+                books.filter((v)=> v.genre.indexOf(value) !== -1)
+            )
+        }
+    }
     return (
         <>
         <Navbar />
@@ -61,10 +74,10 @@ export default function Books({books}){
             <div className="s-size card-wrap">
                 <div className="search">
                     <div className="input-box round-it">
-                        <input type="text" name="filter" className="poppins b-white c-orange bold" autoCorrect="false" placeholder="Cari disini" onChange={filterText}/>
+                        <input type="text" name="filter" className="poppins b-white c-orange bold" autoCorrect="false" placeholder="Cari disini" onChange={filterText} autoComplete="off" />
                     </div>
                     <div className="filter-box round-it">
-                    <select name="cars" id="cars" form="carform" className="poppins c-white bold b-orange">
+                    <select name="cars" id="cars" form="carform" className="poppins c-white bold b-orange" onChange={filterSelect}>
                         <option value="all">All</option>
                         <option value="life">life</option>
                         <option value="science">science</option>
